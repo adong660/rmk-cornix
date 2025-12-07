@@ -1,0 +1,76 @@
+[keyboard]
+name = "Cornix"
+product_name = "Cornix"
+vendor_id = 0x4c4b
+product_id = 0x4643
+manufacturer = "RMK"
+chip = "nrf52840"
+
+[layout]
+rows = 8
+cols = 7
+layers = 10
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3) (0,4) (0,5)              (4,5) (4,4) (4,3) (4,2) (4,1) (4,0)
+(1,0) (1,1) (1,2) (1,3) (1,4) (1,5)              (5,5) (5,4) (5,3) (5,2) (5,1) (5,0)
+(2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6)  (5,6) (6,5) (6,4) (6,3) (6,2) (6,1) (6,0)
+(3,0) (3,1) (3,2) (3,3) (3,4) (3,5)              (7,5) (7,4) (7,3) (7,2) (7,1) (7,0)
+"""
+
+[[layer]]
+name = "base_layer"
+keys = """
+ESC     Q     W     E     R      T                Y     U      I      O     P          BSPC
+TAB     A     S     D     F      G                H     J      K      L     SEMICOLON  QUOT
+LSHIFT  Z     X     C     V      B    NO    NO    N     M      COMMA  DOT   SLASH      RSHIFT
+LCTRL   LGUI  LALT  NO    SPACE  NO               NO    ENTER  NO     RALT  MENU       RCTRL
+"""
+
+[ble]
+enabled = true
+battery_adc_pin = "vddh"
+
+[split]
+connection = "ble"
+
+[split.central]
+rows = 4
+cols = 7
+row_offset = 0
+col_offset = 0
+
+[split.central.matrix]
+row_pins = ["P0_30", "P0_31", "P0_29", "P0_02"]
+col_pins = ["P0_28", "P0_03", "P1_10", "P1_11", "P1_13", "P0_09", "P0_10"]
+
+[[split.central.input_device.encoder]]
+pin_a = "P1_04"
+pin_b = "P1_06"
+phase = "resolution"
+resolution = 4
+
+[[split.peripheral]]
+rows = 4
+cols = 7
+row_offset = 4
+col_offset = 0
+
+[split.peripheral.matrix]
+row_pins = ["P1_09", "P0_28", "P0_03", "P1_10"]
+col_pins = ["P0_30", "P0_31", "P0_29", "P0_02", "P1_13", "P0_10", "P0_09"]
+
+[[split.peripheral.input_device.encoder]]
+pin_a = "P1_04"
+pin_b = "P1_06"
+phase = "resolution"
+resolution = 4
+
+[rmk]
+split_peripherals_num = 1
+morse_max_num = 16
+combo_max_num = 16
+fork_max_num = 16
+debounce_time = 5
+
+[host]
+unlock_keys = [[1, 3], [1, 4]]
