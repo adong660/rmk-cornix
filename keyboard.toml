@@ -38,6 +38,7 @@ rows = 4
 cols = 7
 row_offset = 0
 col_offset = 0
+ble_addr = [0xe3, 0xab, 0x21, 0x4f, 0x8d, 0x72]
 
 [split.central.matrix]
 row_pins = ["P0_30", "P0_31", "P0_29", "P0_02"]
@@ -54,6 +55,7 @@ rows = 4
 cols = 7
 row_offset = 4
 col_offset = 0
+ble_addr = [0x14, 0xa6, 0x3d, 0x7a, 0xcf, 0xe3]
 
 [split.peripheral.matrix]
 row_pins = ["P1_09", "P0_28", "P0_03", "P1_10"]
