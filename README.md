@@ -8,9 +8,10 @@ own RMK firmware for Cornix, not to replicate the official firmware.
 
 - It supports all keys and rotary encoders.
 - It supports Vial.
-- Its Vial layout is compatible with the official firmware, which means you can
-  load your existing Vial layout (`.vil` file). Macros, combos, tap dances, and some other
-  things may lost, though.
+- Its Vial layout is roughlly compatible with the official firmware, so you can
+  load your existing Vial layout (`.vil` file) without much modification.
+  Macros, combos, tap dances, key maps for rotary encoders, and some other
+  things may lost or be messed up, so you may need to reconfigure them.
 
 # Notes
 
@@ -21,12 +22,17 @@ own RMK firmware for Cornix, not to replicate the official firmware.
 # Usage
 
 1. Make any changes you want for the firmware.
-2. Build the firmware. Execute
+
+2. Build the firmware. Execute in the repository root:
    ```sh
    cargo build --release
    ```
-   in the repository root. This will generate two `.uf2` files in the repository
-   root. Make sure you have the Rust toolchain.
+   This will generate two `.uf2` files in the repository root. Make sure you
+   have the Rust toolchain.
+
+   Otherwise, fork this repository, go to GitHub Actions tab, tap *Build RMK
+   firmware*, and download the artifacts when the build is done.
+
 3. Flash the two `.uf2` files to the left and right halves of the keyboard
    respectively. You may need to delete Bluetooth pairing on your computer first
    and re-pair after flashing.
