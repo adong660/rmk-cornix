@@ -8,7 +8,9 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-rmk = { version = "0.8", features = [
+# Use a patched RMK (v0.8.1) to fix freeze issues until a new release is cut
+# rmk = { version = "0.8", features = [
+rmk = { git = "https://github.com/adong660/rmk", branch = "patch-on-freeze", features = [
     "nrf52840_ble",
     "split",
     "async_matrix",
