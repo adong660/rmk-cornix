@@ -218,9 +218,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.2.48"
+version = "1.2.49"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c481bdbf0ed3b892f6f806287d72acd515b352a4ec27a208489b8c1bc839633a"
+checksum = "90583009037521a116abf44494efecd645ba48b6622457080f080b85544e2215"
 dependencies = [
  "find-msvc-tools",
  "shlex",
@@ -1782,8 +1782,7 @@ checksum = "7a2d987857b319362043e95f5353c0535c1f58eec5336fdfcf626430af7def58"
 [[package]]
 name = "rmk"
 version = "0.8.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "648356a58a3a7952b39ccfbacf86bc721079cc81f0e765567e9ef0f9dd58d8fe"
+source = "git+https://github.com/adong660/rmk?branch=patch-on-freeze#ff2f57dc60122e0416a8445eb9ecebc036d53904"
 dependencies = [
  "bitfield-struct",
  "bt-hci",
@@ -1828,8 +1827,7 @@ dependencies = [
 [[package]]
 name = "rmk-config"
 version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2259baa0ceacff7b4168b206a1c0c4d85264bc80022071d284cbbe992e01fd99"
+source = "git+https://github.com/adong660/rmk?branch=patch-on-freeze#ff2f57dc60122e0416a8445eb9ecebc036d53904"
 dependencies = [
  "cargo_toml",
  "config",
@@ -1871,8 +1869,7 @@ dependencies = [
 [[package]]
 name = "rmk-macro"
 version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "188bb513cc84bc02310253afb447747e10efb1a18b58131cec0af3d9e4f7b28c"
+source = "git+https://github.com/adong660/rmk?branch=patch-on-freeze#ff2f57dc60122e0416a8445eb9ecebc036d53904"
 dependencies = [
  "cargo_toml",
  "darling",
@@ -1892,8 +1889,7 @@ dependencies = [
 [[package]]
 name = "rmk-types"
 version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "158750bed5d3e400504fac8ecb9aef9a58a2319ad641900e00bc660ac2c77330"
+source = "git+https://github.com/adong660/rmk?branch=patch-on-freeze#ff2f57dc60122e0416a8445eb9ecebc036d53904"
 dependencies = [
  "bitfield-struct",
  "defmt 1.0.1",
