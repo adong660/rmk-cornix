@@ -11,12 +11,11 @@ own RMK firmware for Cornix, not to replicate the official firmware.
 - Its Vial layout is roughlly compatible with the official firmware, so you can
   load your existing Vial layout (`.vil` file) without much modification.
   Macros, combos, tap dances, key maps for rotary encoders, and some other
-  things may lost or be messed up, so you may need to reconfigure them.
+  things may lost or be messed up, so you may still need to reconfigure them.
 
 # Notes
 
 - LED lighting is not supported.
-- Battery level reporting seems not working properly.
 - Optimization on BLE or power consumption is not made.
 
 # Usage

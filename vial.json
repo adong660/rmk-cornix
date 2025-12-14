@@ -1,4 +1,12 @@
 {
+    "name": "Cornix",
+    "productId": "0x4643",
+    "vendorId": "0x4C4B",
+    "lighting": "none",
+    "matrix": {
+        "cols": 7,
+        "rows": 8
+    },
     "customKeycodes": [
         {
             "name": "BT0",
@@ -14,6 +22,16 @@
             "name": "BT2",
             "shortName": "BT2",
             "title": "Bluetooth Channel 2"
+        },
+        {
+            "name": "BT3",
+            "shortName": "BT3",
+            "title": "Bluetooth Channel 3"
+        },
+        {
+            "name": "BT4",
+            "shortName": "BT4",
+            "title": "Bluetooth Channel 4"
         },
         {
             "name": "NEXT_BT",
@@ -302,13 +320,5 @@
                 "7,4"
             ]
         ]
-    },
-    "lighting": "none",
-    "matrix": {
-        "cols": 7,
-        "rows": 8
-    },
-    "name": "Cornix",
-    "productId": "0x4643",
-    "vendorId": "0x4C4B"
+    }
 }
