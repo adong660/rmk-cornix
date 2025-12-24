@@ -9,6 +9,7 @@ chip = "nrf52840"
 [ble]
 enabled = true
 ble_use_2m_phy = true
+default_tx_power = 0
 battery_adc_pin = "P0_05"
 adc_divider_measured = 2000
 adc_divider_total = 2806
@@ -68,6 +69,14 @@ enabled = true
 clear_storage = false
 clear_layout = false
 
+[dependency]
+defmt_log = false
+
+[chip.nrf52840]
+dcdc_reg0 = true
+dcdc_reg1 = true
+dcdc_reg0_voltage = "3V3"
+
 [layout]
 rows = 8
 cols = 7
@@ -87,17 +96,17 @@ TAB     A     S     D     F      G                H     J      K      L     SEMI
 LSHIFT  Z     X     C     V      B    NO    NO    N     M      COMMA  DOT   SLASH      RSHIFT
 LCTRL   LGUI  LALT  NO    SPACE  NO               NO    ENTER  NO     RALT  MENU       RCTRL
 """
-encoders = [["VolUp", "VolDn"], ["PgDn", "PgUp"]]  # This configuration is not yet available in RMK
+encoders = [["PgDn", "PgUp"], ["AudioVolUp", "AudioVolDown"]]
 
 [behavior.one_shot]
 timeout = "3s"
 
 [behavior.combo]
-timeout = "150ms"
+timeout = "50ms"
 combos = []
 
 [behavior.morse]
 enable_flow_tap = false
 hold_on_other_press = true
-hold_timeout = "150ms"
-gap_timeout = "150ms"
+hold_timeout = "250ms"
+gap_timeout = "250ms"
